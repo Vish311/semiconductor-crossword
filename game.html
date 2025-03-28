@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Crossword QR Code</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #1565c0;
+        }
+        #qrcode {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+        }
+        iframe {
+            width: 90%;
+            height: 600px;
+            border: 2px solid #1565c0;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h2>Scan the QR Code to Play the Semiconductor Crossword</h2>
+    <div id="qrcode"></div>
+    <h3>Or Play Below:</h3>
+
+    <!-- Embed the Crossword Game -->
+    <iframe src="https://your-crossword-url.com" title="Semiconductor Crossword"></iframe>
+
+    <script>
+        // Replace with your actual crossword URL
+        let crosswordURL = "https://your-crossword-url.com";
+
+        // Generate QR Code
+        new QRCode(document.getElementById("qrcode"), {
+            text: crosswordURL,
+            width: 200,
+            height: 200,
+            colorDark: "#1565c0",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
